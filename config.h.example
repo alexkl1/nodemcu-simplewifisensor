@@ -1,0 +1,4 @@
+// Example config file. rename to config.h
+#define STASSID "<YOURWIFISSID>" // WIFI ssid
+#define STAPSK  "<YOURWIFIPASSWORD>" // WIFI network password
+#define HOSTNAME "esp8266" // host name for easy access. add .local prefix to browser (ex. esp8266.local)
