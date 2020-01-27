@@ -10,7 +10,7 @@ Very simple and easy to assemble NodeMCU (ESP8266) WIFI temperature sensor. It c
 
 # Hardware requirenments
 - NodeMCU board (any compatible with Arduino IDE)
-- One or several DS18B20 or compatible Dallas temperature sensor
+- One or several DS18B20 or compatible Dallas temperature sensor. 4.7 KOhm resistor between DQ and VDD lines required
 - Existing WIFI network to work with
 
 
@@ -22,3 +22,12 @@ Very simple and easy to assemble NodeMCU (ESP8266) WIFI temperature sensor. It c
 - DallasTemperature by MilesBurton, ... (https://github.com/milesburton/Arduino-Temperature-Control-Library)
 - One Wire by Jim Studt,... (https://www.pjrc.com/teensy/td_libs_OneWire.html)
 - AdaFruit SSD 1306
+
+# Webserver
+Example request: http://esp8266.local/
+Example answer: {  "rssi": "-72",  "version": "1.000", "sensors": {"124aba839a234441": "31.25" , "38a78af391849992": "21.81" } }
+
+rssi - WIFI signal quality (less than -70 is ok)
+sensors - hash array where key is sensor unique id and value is measured temperature in celcius
+
+
